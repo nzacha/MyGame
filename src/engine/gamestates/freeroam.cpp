@@ -55,6 +55,10 @@ class FreeRoam : public GameState{
             if(key_handlers[KEY_D]){
                 camera->moveRight();
             }
+            if(key_handlers[KEY_R]){
+                camera->turnTo(Vec3{0,0,0});
+                key_handlers[KEY_R] = false;
+            }
         }
 
         //renders with specified state
@@ -197,7 +201,7 @@ class FreeRoam : public GameState{
 
         //Called when mouse is moved
         void mouse_moved(int x, int y){
-            //cout << "mouse moved (" << x << "," << y << ") -> (" << x-center_x << "," << y-center_y << ")"<< endl;
+            cout << "mouse moved (" << x << "," << y << ") -> (" << x-center_x << "," << y-center_y << ")"<< endl;
             offset_x = center_x - x;
             offset_y = center_y - y; 
 
@@ -207,7 +211,7 @@ class FreeRoam : public GameState{
 
         //Called when mouse is pressed
         void mouse_pressed(int button, int state, int x, int y){
-            //cout << "mouse moved (" << button << ") , ( " << state << ") -> (" << x << "," << y << ")" << endl;
+            //cout << "mouse pressed (" << button << ") , ( " << state << ") -> (" << x << "," << y << ")" << endl;
         }
 };
 

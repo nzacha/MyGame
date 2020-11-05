@@ -80,14 +80,14 @@ namespace GameManager{
         //glutReshapeFunc(handle_resize);
         glutIdleFunc(idle_func_callback);
 
+        glutMouseFunc(mouse_pressed_func_callaback); 
+        glutMotionFunc(mouse_dragged_func_callback);
+        glutPassiveMotionFunc(mouse_moved_func_callback);
+
         glutKeyboardFunc(keyboard_func_callback);
         glutKeyboardUpFunc(keyboard_up_func_callback);
         glutSpecialFunc(special_key_func_callback);
         glutSpecialUpFunc(special_key_up_func_callback);
-
-        glutMotionFunc(mouse_dragged_func_callback);
-        glutPassiveMotionFunc(mouse_moved_func_callback);
-        glutMouseFunc(mouse_pressed_func_callaback); 
     }
 }
 

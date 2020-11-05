@@ -1,0 +1,18 @@
+TO-DO
+
+bugs:
+    -mouse motion isnt recorded while key is pressed
+    -weird behaviour when camera moves past 0 towards negative values
+
+features:
+    -ground
+    -collisions (& triggers)
+    -gravity
+    -texture rendering
+    -objects within objects (object hierarchy)
+    -animations
+
+done:
+    -basic engine (objects, rendering, gamestates, scenes, camera, movement)
+    -move in 3D space
+    -depth testing (z-buffer)
